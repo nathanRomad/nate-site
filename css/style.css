@@ -238,11 +238,11 @@ ol.type li a:hover {
 /* Contact Section */
 #contact {
 	padding: 60px 0 60px 0;
-	background: #262626;
+	background: #373737;
 }
 #contact h2 {
 	font-weight: 400;
-	color: #777;
+	color: rgb(213, 213, 213);
 	margin: 60px 0;
 }
 #contact img {
@@ -250,7 +250,7 @@ ol.type li a:hover {
 	margin: 5px 30px 10px 0;
 }
 #contact p {
-	color: #666;
+	color: rgb(213, 213, 213);
 	margin-bottom: 20px;
 	line-height: 24px;
 }
@@ -307,22 +307,22 @@ label {
 	box-shadow: transparent;
 }
 .form-control::-webkit-input-placeholder {
-color: #777;
+color: rgb(213, 213, 213);
 }
 .form-control:-moz-placeholder {
-color: #777;
+color: rgb(213, 213, 213);
 }
 .form-control::-moz-placeholder {
-color: #777;
+color: rgb(213, 213, 213);
 }
 .form-control:-ms-input-placeholder {
-color: #777;
+color: rgb(213, 213, 213);
 }
 #contact .btn-default {
 	font-weight: 400;
-	color: #666;
+	color: rgb(213, 213, 213);
 	background-color: transparent;
-	border: 2px solid #666;
+	border: 2px solid rgb(213, 213, 213);
 	padding: 10px 20px;
 	margin: 0;
 	font-size: 15px;
@@ -342,7 +342,7 @@ color: #777;
 }
 #footer p {
 	font-size: 15px;
-	color: #666;
+	color: rgb(213, 213, 213);
 }
 
 
@@ -393,7 +393,7 @@ color: #777;
 	width: 30px;
 	}
 .skills-box:hover .skills-img{
-	transform: translateX(-20px);
+	transform: translateY(-5px);
 	}
 	
 .skills-title{
