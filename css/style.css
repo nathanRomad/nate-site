@@ -67,7 +67,7 @@ hr {
 	height: 6px;
 	width: 70px;
 	position: relative;
-	background: #444;
+	/* background: #444; */
 	margin-bottom: 20px;
 	margin-left: 0;
 	border: 0;
@@ -105,17 +105,19 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 /* Header Section */
 .intro {
-	display: table;
+	display: flex;
 	width: 100%;
 	padding: 0;
 	margin-bottom: 80px;
-	background: url(../img/Bridge\ at\ Hanmer.jpg) no-repeat right top;
+	background: url(../img/Cairn\ Lake\ Tekapo.jpg) no-repeat right top;
 	background-color: #e5e5e5;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
+	background-position: 30% 50%;
 }
+
 .intro .overlay {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,d5dade+100&0.5+0,0+100 */
 	background: -moz-linear-gradient(left, rgba(255,255,255,0.5) 0%, rgba(213,218,222,0) 100%); /* FF3.6-15 */
@@ -123,19 +125,26 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	background: linear-gradient(to right, rgba(255,255,255,0.5) 0%, rgba(213,218,222,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00d5dade', GradientType=1 ); /* IE6-9 */
 }
+
+
 .intro .fa {
 	font-size: 94px;
 	margin-bottom: 40px;
 	color: #fff;
+	
 }
 .intro p {
 	color: #444;
 	margin: 10px 0 20px 0;
 	font-size: 22px;
+	
 }
 header .intro-text {
 	padding-top: 250px;
 	padding-bottom: 200px;
+	margin-bottom: 120px;
+	margin-left: 20%;
+	width: 100%;
 }
 /* Portfolio Section */
 #portfolio {
@@ -238,11 +247,11 @@ ol.type li a:hover {
 /* Contact Section */
 #contact {
 	padding: 60px 0 60px 0;
-	background: #262626;
+	background: #373737;
 }
 #contact h2 {
 	font-weight: 400;
-	color: #777;
+	color: rgb(213, 213, 213);
 	margin: 60px 0;
 }
 #contact img {
@@ -250,7 +259,7 @@ ol.type li a:hover {
 	margin: 5px 30px 10px 0;
 }
 #contact p {
-	color: #666;
+	color: rgb(213, 213, 213);
 	margin-bottom: 20px;
 	line-height: 24px;
 }
@@ -307,22 +316,22 @@ label {
 	box-shadow: transparent;
 }
 .form-control::-webkit-input-placeholder {
-color: #777;
+color: rgb(213, 213, 213);
 }
 .form-control:-moz-placeholder {
-color: #777;
+color: rgb(213, 213, 213);
 }
 .form-control::-moz-placeholder {
-color: #777;
+color: rgb(213, 213, 213);
 }
 .form-control:-ms-input-placeholder {
-color: #777;
+color: rgb(213, 213, 213);
 }
 #contact .btn-default {
 	font-weight: 400;
-	color: #666;
+	color: rgb(213, 213, 213);
 	background-color: transparent;
-	border: 2px solid #666;
+	border: 2px solid rgb(213, 213, 213);
 	padding: 10px 20px;
 	margin: 0;
 	font-size: 15px;
@@ -342,5 +351,133 @@ color: #777;
 }
 #footer p {
 	font-size: 15px;
-	color: #666;
+	color: rgb(213, 213, 213);
 }
+
+
+/* Skills Section */
+
+.skills-section{
+	padding-top: 20px;
+	background-color: rgb(220, 220, 220);
+	}
+	
+.skills-header{
+	text-align: center;
+	color: #fff;
+	padding: 1rem;
+	position: relative;
+	}
+	
+.skills-header:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100px;
+	height: 4px;
+	/* background-color: #2ecc71; */
+	border-radius: 2px;
+	}
+	
+.skills-container{
+	display: grid;
+	grid-tempLate-columns: repeat(5, 1fr);
+	justify-content:center;
+	align-items:center;
+	text-align: center;
+	grid-gap:1rem;
+	padding: 1rem 80px;
+	font-size: 1.2rem;
+	}
+
+.skills-box{
+	padding: 1rem;
+	color: #000;
+	cursor:pointer;
+	}
+.skills-box:hover > .skills-title: after, 
+.skills-box:hover > .skills-title: before{
+	width: 30px;
+	}
+.skills-box:hover .skills-img{
+	transform: translateY(-5px);
+	}
+	
+.skills-title{
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	position: relative;
+	}
+	
+.skills-title:after{
+	content: '';
+	position:absolute;
+	bottom: 0;
+	rigth: 50%;
+	width:20px;
+	height:4px;
+	border-radius: 2px 0 0 2px;
+	/* background-color: #2ecc71; */
+	transition: .5s;
+	}
+	
+.skills-title:before{
+	content: '';
+	position:absolute;
+	bottom: 0;
+	left: 50%;
+	width:100px;
+	height:4px;
+	border-radius: 0 2px 2px 0;
+	/* background-color: #2ecc71; */
+	}
+	
+.skills-icons{
+	width:50px;
+	z-index:2;
+	}
+	
+.skills-img{
+	width:90px;
+	height:90px;
+	position: relative;
+	border-radius: 45px;
+	background-color: #fff;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	transition: .5s;
+	}
+	
+.skills-img:after{
+	content: '';
+	position:absolute;
+	top:0;
+	left: 0;
+	width:50%;
+	height:90px;
+	background: rgba(100, 100, 100, 0.5);
+	border-radius: 45px 0 0 45px;
+	}
+.skills-title h3{
+	color: #333;
+	margin-top: 0.5rem;
+	}
+@media screen and (max-width:990px){
+	 .skills-container{
+	 grid-tempLate-columns: repeat(2, 1fr);
+	 padding: 2rem 50px;
+	 }
+	}
+	
+@media screen and (max-width:650px){
+	 .skills-container{
+	 grid-tempLate-columns:2fr;
+	 padding: 2rem 50px;
+	 }
+	}

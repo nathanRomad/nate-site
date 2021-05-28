@@ -37,78 +37,219 @@
           <div class="col-xs-12 col-md-8">
             <div class="intro-text">
               <h1>Nathan Hamilton</h1>
-              <p>Software Developer / Photographer</p>
-              <a href="#portfolio" class="btn btn-custom btn-lg page-scroll">Portfolio</a> <a href="#contact" class="btn btn-custom btn-lg page-scroll">About Me</a> </div>
+              <p>Software Developer / World Traveler / Photographer</p>
+              <a href="#portfolio" class="btn btn-custom btn-lg page-scroll">Portfolio</a> 
+              <a href="#skills" class="btn btn-custom btn-lg page-scroll">Skills</a> 
+              <a href="#contact" class="btn btn-custom btn-lg page-scroll">About Me</a> 
+              </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </header>
+
 <!-- Portfolio Section -->
 <div id="portfolio">
   <div class="container">
-    <div class="section-title">
+    <div class="section-title text-center center">
       <h2>Portfolio</h2>
+      <hr>
     </div>
     <div class="categories">
       <ul class="cat">
         <li>
           <ol class="type">
             <li><a href="#" data-filter="*" class="active">All</a></li>
-            <li><a href="#" data-filter=".client-side">Clint Side</a></li>
-            <li><a href="#" data-filter=".server-side">Server Side</a></li>
+            <li><a href="#" data-filter=".client">Client Side</a></li>
+            <li><a href="#" data-filter=".server">Server Side</a></li>
             <li><a href="#" data-filter=".resume">Personal Resume</a></li>
           </ol>
         </li>
       </ul>
+      <div class="clearfix"></div>
     </div>
     <div class="row">
       <div class="portfolio-items">
-        <div class="col-sm-6 col-md-4 client-side">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/topFIVE/topFIVE_login.png" title="topFIVE" data-lightbox-gallery="gallery1">
+        <div class="col-sm-6 col-md-3 col-lg-3 client">
+          <div id="topFIVE" class="portfolio-item">
+            <div class="hover-bg"> <a href="img/topFIVE/topFIVE_login.png" title="topFIVE" rel="prettyPhoto">
               <div class="hover-text">
-                <div class="overlay-caption">
-                  <div class="overlay-content">
-                    <h4>topFIVE</h4>
-                  </div>
-                </div>
-              </div>
-              <img src="img/topFIVE/topFIVE_login.png" class="img-responsive" alt="Project Title"> </a> </div>
+                <h4>topFIVE</h4>
+                <small>React Application</small> </div>
+              <img src="img/topFIVE/topFIVE_login.png" class="img-responsive" alt="Top Five"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 resume">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/resume/resume_scroll.gif" title="Project Title" data-lightbox-gallery="gallery1">
+        <div class="col-sm-6 col-md-3 col-lg-3 resume">
+          <div id="resume" class="portfolio-item">
+            <div class="hover-bg"> <a href="img/resume/resume_scroll.gif" title="Personal Resume" rel="prettyPhoto">
               <div class="hover-text">
-                <div class="overlay-caption">
-                  <div class="overlay-content">
-                    <h4>Nathan Hamilton Resume</h4>
-                  </div>
-                </div>
-              </div>
-              <img src="img/resume/resume_scroll.gif" class="img-responsive" alt="Project Title"> </a> </div>
+                <h4>Nathan Hamilton</h4>
+                <small>Personal Resume</small> </div>
+              <img src="img/resume/resume_scroll.gif" class="img-responsive" alt="Nathan Hamilton Resume"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 server-side">
+        <div class="col-sm-6 col-md-3 col-lg-3 server">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/coming_soon.png" title="Project Title" data-lightbox-gallery="gallery1">
+            <div class="hover-bg"> <a href="img/coming_soon.png" title="Coming Soon" rel="prettyPhoto">
               <div class="hover-text">
-                <div class="overlay-caption">
-                  <div class="overlay-content">
-                    <h4>Python-Server</h4>
-                  </div>
-                </div>
-              </div>
+                <h4>Coming Soon</h4>
+                <small>Python/Django</small> </div>
               <img src="img/coming_soon.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Skills Section -->
+
+<div id="skills" class="skills-section">
+    <div class="skills-header">
+     <h1>Skills</h1>   
+     </div>
+
+     <div class="skills-container">
+
+      <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/html5.svg"     alt="" class="skills-icons">
+        </div>
+         <h3>HTML 5</h3>
+        </div>
+       </div>
+
+        <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/css.png" alt="" class="skills-icons">
+        </div>
+        <h3>CSS3</h3>
+        </div>
+       </div>
+
+        <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/javascript.png" alt="" class="skills-icons">
+        </div>
+        <h3>JAVASCRIPT</h3>
+        </div>
+       </div>
+
+          <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/react.png" alt="" class="skills-icons">
+        </div>
+        <h3>REACT</h3>
+        </div>
+       </div>
+
+          <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/bootstrap.png" alt="" class="skills-icons">
+        </div>
+        <h3>Bootstrap</h3>
+        </div>
+       </div>
+
+      <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/node.png"     alt="" class="skills-icons">
+        </div>
+         <h3>NODE.JS</h3>
+        </div>
+       </div>
+
+        <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/chrome-dev.png" alt="" class="skills-icons">
+        </div>
+        <h3>Chrome Developer Tools</h3>
+        </div>
+       </div>
+
+        <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/git.png" alt="" class="skills-icons">
+        </div>
+        <h3>GIT</h3>
+        </div>
+       </div>
+
+          <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/github.png" alt="" class="skills-icons">
+        </div>
+        <h3>Github</h3>
+        </div>
+       </div>
+
+          <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/npm.png" alt="" class="skills-icons">
+        </div>
+        <h3>NPM</h3>
+        </div>
+       </div>
+
+           <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/vscode.png"     alt="" class="skills-icons">
+        </div>
+         <h3>VS Code</h3>
+        </div>
+       </div>
+
+        <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/SQLite.png" alt="" class="skills-icons">
+        </div>
+        <h3>SQL Lite</h3>
+        </div>
+       </div>
+
+        <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/python.png" alt="" class="skills-icons">
+        </div>
+        <h3>PYTHON</h3>
+        </div>
+       </div>
+        
+        <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/django.svg" alt="" class="skills-icons">
+        </div>
+        <h3>DJANGO</h3>
+        </div>
+       </div>
+        
+        <div class="skills-box">
+       <div class="skills-title">
+       <div class="skills-img">
+        <img src="img/icons/figma.png" alt="" class="skills-icons">
+        </div>
+        <h3>Figma</h3>
+        </div>
+       </div>
+
+        </div>
+      </div>
+
 <!-- Contact Section -->
 <div id="contact">
   <div class="container">
@@ -122,10 +263,10 @@
           <p></p>
           <div class="social">
             <ul>
-              <li><a href="https://www.facebook.com/nathan.hamilton.5011"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="https://www.instagram.com/idreamoftravel/"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/nathan-hamilton-3864b520/"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="https://github.com/nathanRomad"><i class="fa fa-github"></i></a></li>
+              <li><a href="https://www.facebook.com/nathan.hamilton.5011" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/idreamoftravel/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/nathan-hamilton-3864b520/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="https://github.com/nathanRomad" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></li>
             </ul>
           </div>
         </div>
@@ -133,33 +274,13 @@
     </div>
     <div class="col-md-5 col-md-offset-1">
       <div class="section-title">
-        <p>For inquiries or collaborations please contact me by email at <strong>nathan.a.hamilton@gmail.com</strong> or fill out the form below.</p>
+        <p>For inquiries or collaborations please contact me by email at <strong>nathan.a.hamilton@gmail.com</strong></p>
       </div>
-      <form name="sentMessage" id="contactForm" novalidate>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
-          <p class="help-block text-danger"></p>
-        </div>
-        <div id="success"></div>
-        <button type="submit" class="btn btn-default btn-lg">Send Message</button>
-      </form>
+      
     </div>
   </div>
 </div>
+
 <div id="footer">
   <div class="container">
     <p>&copy; 2021 Nathan Hamilton. All rights reserved.</p>
@@ -171,7 +292,7 @@
 <script type="text/javascript" src="js/nivo-lightbox.js"></script> 
 <script type="text/javascript" src="js/jquery.isotope.js"></script> 
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
-<script type="text/javascript" src="js/contact_me.js"></script> 
+{% comment %} <script type="text/javascript" src="js/contact_me.js"></script>  {% endcomment %}
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
