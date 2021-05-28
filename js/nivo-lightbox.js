@@ -148,166 +148,166 @@
 			return false;
 		},
 
-        processContent: function(content, link){
-            var $this = this,
-                href = link.attr('href'),
-                video = href.match(/(youtube|youtu|vimeo)\.(com|be)\/(watch\?v=([\w-]+)|([\w-]+))/);
+        // processContent: function(content, link){
+        //     var $this = this,
+        //         href = link.attr('href'),
+        //         video = href.match(/(youtube|youtu|vimeo)\.(com|be)\/(watch\?v=([\w-]+)|([\w-]+))/);
 
-            content.html('').addClass('nivo-lightbox-loading');
+        //     content.html('').addClass('nivo-lightbox-loading');
 
-            // Is HiDPI?
-            if(this.isHidpi() && link.attr('data-lightbox-hidpi')){
-                href = link.attr('data-lightbox-hidpi');
-            }
+        //     // Is HiDPI?
+        //     if(this.isHidpi() && link.attr('data-lightbox-hidpi')){
+        //         href = link.attr('data-lightbox-hidpi');
+        //     }
 
-            // Image
-            if(href.match(/\.(jpeg|jpg|gif|png)$/i) !== null){
-                var img = $('<img>', { src: href });
-                console.log('img: ', img);
-                img.one('load', function() {
-					var wrap = $('<div class="nivo-lightbox-image" />');
-                    wrap.append(img);
-					content.html(wrap).removeClass('nivo-lightbox-loading');
+        //     // Image
+        //     if(href.match(/\.(jpeg|jpg|gif|png)$/i) !== null){
+        //         var img = $('<img>', { src: href });
+        //         console.log('img: ', img);
+        //         img.one('load', function() {
+		// 			var wrap = $('<div class="nivo-lightbox-image" />');
+        //             wrap.append(img);
+		// 			content.html(wrap).removeClass('nivo-lightbox-loading');
 
-					// Vertically center images
-					wrap.css({
-						'line-height': $('.nivo-lightbox-content').height() +'px',
-						'height': $('.nivo-lightbox-content').height() +'px' // For Firefox
-					});
-					$(window).resize(function() {
-						wrap.css({
-							'line-height': $('.nivo-lightbox-content').height() +'px',
-							'height': $('.nivo-lightbox-content').height() +'px' // For Firefox
-						});
-					});
-				}).each(function() {
-					if(this.complete) $(this).load();
-				});
+		// 			// Vertically center images
+		// 			wrap.css({
+		// 				'line-height': $('.nivo-lightbox-content').height() +'px',
+		// 				'height': $('.nivo-lightbox-content').height() +'px' // For Firefox
+		// 			});
+		// 			$(window).resize(function() {
+		// 				wrap.css({
+		// 					'line-height': $('.nivo-lightbox-content').height() +'px',
+		// 					'height': $('.nivo-lightbox-content').height() +'px' // For Firefox
+		// 				});
+		// 			});
+		// 		}).each(function() {
+		// 			if(this.complete) $(this).load();
+		// 		});
 
-				img.error(function() {
-					var wrap = $('<div class="nivo-lightbox-error"><p>'+ $this.options.errorMessage +'</p></div>');
-                    content.html(wrap).removeClass('nivo-lightbox-loading');
-				});
-            }
-            // Video (Youtube/Vimeo)
-            else if(video){
-                var src = '',
-                    classTerm = 'nivo-lightbox-video';
+		// 		img.error(function() {
+		// 			var wrap = $('<div class="nivo-lightbox-error"><p>'+ $this.options.errorMessage +'</p></div>');
+        //             content.html(wrap).removeClass('nivo-lightbox-loading');
+		// 		});
+        //     }
+        //     // Video (Youtube/Vimeo)
+        //     else if(video){
+        //         var src = '',
+        //             classTerm = 'nivo-lightbox-video';
 
-                if(video[1] == 'youtube'){
-                    src = 'http://www.youtube.com/embed/'+ video[4];
-                    classTerm = 'nivo-lightbox-youtube';
-                }
-                if(video[1] == 'youtu'){
-                    src = 'http://www.youtube.com/embed/'+ video[3];
-                    classTerm = 'nivo-lightbox-youtube';
-                }
-                if(video[1] == 'vimeo'){
-                    src = 'http://player.vimeo.com/video/'+ video[3];
-                    classTerm = 'nivo-lightbox-vimeo';
-                }
+        //         if(video[1] == 'youtube'){
+        //             src = 'http://www.youtube.com/embed/'+ video[4];
+        //             classTerm = 'nivo-lightbox-youtube';
+        //         }
+        //         if(video[1] == 'youtu'){
+        //             src = 'http://www.youtube.com/embed/'+ video[3];
+        //             classTerm = 'nivo-lightbox-youtube';
+        //         }
+        //         if(video[1] == 'vimeo'){
+        //             src = 'http://player.vimeo.com/video/'+ video[3];
+        //             classTerm = 'nivo-lightbox-vimeo';
+        //         }
 
-                if(src){
-                    var iframeVideo = $('<iframe>', {
-                        src: src,
-                        'class': classTerm,
-                        frameborder: 0,
-                        vspace: 0,
-                        hspace: 0,
-                        scrolling: 'auto'
-                    });
-                    content.html(iframeVideo);
-                    iframeVideo.load(function(){ content.removeClass('nivo-lightbox-loading'); });
-                }
-            }
-            // AJAX
-            else if(link.attr('data-lightbox-type') == 'ajax'){
-				$.ajax({
-					url: href,
-					cache: false,
-					success: function(data) {
-						var wrap = $('<div class="nivo-lightbox-ajax" />');
-						wrap.append(data);
-						content.html(wrap).removeClass('nivo-lightbox-loading');
+        //         if(src){
+        //             var iframeVideo = $('<iframe>', {
+        //                 src: src,
+        //                 'class': classTerm,
+        //                 frameborder: 0,
+        //                 vspace: 0,
+        //                 hspace: 0,
+        //                 scrolling: 'auto'
+        //             });
+        //             content.html(iframeVideo);
+        //             iframeVideo.load(function(){ content.removeClass('nivo-lightbox-loading'); });
+        //         }
+        //     }
+        //     // AJAX
+        //     else if(link.attr('data-lightbox-type') == 'ajax'){
+		// 		$.ajax({
+		// 			url: href,
+		// 			cache: false,
+		// 			success: function(data) {
+		// 				var wrap = $('<div class="nivo-lightbox-ajax" />');
+		// 				wrap.append(data);
+		// 				content.html(wrap).removeClass('nivo-lightbox-loading');
 
-						// Vertically center html
-						if(wrap.outerHeight() < content.height()){
-							wrap.css({
-								'position': 'relative',
-								'top': '50%',
-								'margin-top': -(wrap.outerHeight()/2) +'px'
-							});
-						}
-						$(window).resize(function() {
-							if(wrap.outerHeight() < content.height()){
-								wrap.css({
-									'position': 'relative',
-									'top': '50%',
-									'margin-top': -(wrap.outerHeight()/2) +'px'
-								});
-							}
-						});
-					},
-					error: function(){
-						var wrap = $('<div class="nivo-lightbox-error"><p>'+ $this.options.errorMessage +'</p></div>');
-                        content.html(wrap).removeClass('nivo-lightbox-loading');
-					}
-				});
-            }
-            // Inline HTML
-            else if(href.substring(0, 1) == '#' && link.attr('data-lightbox-type') == 'inline'){
-                if($(href).length){
-                    var wrap = $('<div class="nivo-lightbox-inline" />');
-					wrap.append($(href).clone().show());
-                    content.html(wrap).removeClass('nivo-lightbox-loading');
+		// 				// Vertically center html
+		// 				if(wrap.outerHeight() < content.height()){
+		// 					wrap.css({
+		// 						'position': 'relative',
+		// 						'top': '50%',
+		// 						'margin-top': -(wrap.outerHeight()/2) +'px'
+		// 					});
+		// 				}
+		// 				$(window).resize(function() {
+		// 					if(wrap.outerHeight() < content.height()){
+		// 						wrap.css({
+		// 							'position': 'relative',
+		// 							'top': '50%',
+		// 							'margin-top': -(wrap.outerHeight()/2) +'px'
+		// 						});
+		// 					}
+		// 				});
+		// 			},
+		// 			error: function(){
+		// 				var wrap = $('<div class="nivo-lightbox-error"><p>'+ $this.options.errorMessage +'</p></div>');
+        //                 content.html(wrap).removeClass('nivo-lightbox-loading');
+		// 			}
+		// 		});
+        //     }
+        //     // Inline HTML
+        //     else if(href.substring(0, 1) == '#' && link.attr('data-lightbox-type') == 'inline'){
+        //         if($(href).length){
+        //             var wrap = $('<div class="nivo-lightbox-inline" />');
+		// 			wrap.append($(href).clone().show());
+        //             content.html(wrap).removeClass('nivo-lightbox-loading');
 
-                    // Vertically center html
-					if(wrap.outerHeight() < content.height()){
-						wrap.css({
-							'position': 'relative',
-							'top': '50%',
-							'margin-top': -(wrap.outerHeight()/2) +'px'
-						});
-					}
-					$(window).resize(function() {
-						if(wrap.outerHeight() < content.height()){
-							wrap.css({
-								'position': 'relative',
-								'top': '50%',
-								'margin-top': -(wrap.outerHeight()/2) +'px'
-							});
-						}
-					});
-				} else {
-					var wrapError = $('<div class="nivo-lightbox-error"><p>'+ $this.options.errorMessage +'</p></div>');
-                    content.html(wrapError).removeClass('nivo-lightbox-loading');
-				}
-            }
-            // iFrame (default)
-            else if(link.attr('data-lightbox-type') == 'iframe'){
-                var iframe = $('<iframe>', {
-                    src: href,
-                    'class': 'nivo-lightbox-item',
-                    frameborder: 0,
-                    vspace: 0,
-                    hspace: 0,
-                    scrolling: 'auto'
-                });
-                content.html(iframe);
-                iframe.load(function(){ content.removeClass('nivo-lightbox-loading'); });
-            } else {
-				return false;
-			}
+        //             // Vertically center html
+		// 			if(wrap.outerHeight() < content.height()){
+		// 				wrap.css({
+		// 					'position': 'relative',
+		// 					'top': '50%',
+		// 					'margin-top': -(wrap.outerHeight()/2) +'px'
+		// 				});
+		// 			}
+		// 			$(window).resize(function() {
+		// 				if(wrap.outerHeight() < content.height()){
+		// 					wrap.css({
+		// 						'position': 'relative',
+		// 						'top': '50%',
+		// 						'margin-top': -(wrap.outerHeight()/2) +'px'
+		// 					});
+		// 				}
+		// 			});
+		// 		} else {
+		// 			var wrapError = $('<div class="nivo-lightbox-error"><p>'+ $this.options.errorMessage +'</p></div>');
+        //             content.html(wrapError).removeClass('nivo-lightbox-loading');
+		// 		}
+        //     }
+        //     // iFrame (default)
+        //     else if(link.attr('data-lightbox-type') == 'iframe'){
+        //         var iframe = $('<iframe>', {
+        //             src: href,
+        //             'class': 'nivo-lightbox-item',
+        //             frameborder: 0,
+        //             vspace: 0,
+        //             hspace: 0,
+        //             scrolling: 'auto'
+        //         });
+        //         content.html(iframe);
+        //         iframe.load(function(){ content.removeClass('nivo-lightbox-loading'); });
+        //     } else {
+		// 		return false;
+		// 	}
 
-            // Set the title
-            if(link.attr('title')){
-                var titleWrap = $('<span>', { 'class': 'nivo-lightbox-title' });
-                titleWrap.text(link.attr('title'));
-                $('.nivo-lightbox-title-wrap').html(titleWrap);
-            } else {
-                $('.nivo-lightbox-title-wrap').html('');
-            }
-        },
+        //     // Set the title
+        //     if(link.attr('title')){
+        //         var titleWrap = $('<span>', { 'class': 'nivo-lightbox-title' });
+        //         titleWrap.text(link.attr('title'));
+        //         $('.nivo-lightbox-title-wrap').html(titleWrap);
+        //     } else {
+        //         $('.nivo-lightbox-title-wrap').html('');
+        //     }
+        // },
 
         constructLightbox: function(){
             if($('.nivo-lightbox-overlay').length) return $('.nivo-lightbox-overlay');

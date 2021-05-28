@@ -1,12 +1,13 @@
 const contentTarget = document.querySelector(".project_modal")
-const eventHub = document.querySelector(".portfolio-items")
+const eventHub = document.querySelector(".main_container")
 
 eventHub.addEventListener("click", e => {
   if (e.target.id === "topFIVE"){
-    // console.log("click")
+    console.log("click")
     contentTarget.innerHTML = `
       <div id="about__modal" class="modal--parent">
         <div id="about__content" class="modal--content">
+        <button id="modal--close">X</button>
           <h2 class="modalTitle">topFIVE</h2>
           <section>Full-stack one page application for keeping track of your topFIVE's! 
           This application will allow a user to log in and create, read, update, or delete their topFIVE's. 
@@ -21,7 +22,7 @@ eventHub.addEventListener("click", e => {
       </div>
     `
   } else if (e.target.id === "resume"){
-    // console.log("click")
+    console.log("click")
     contentTarget.innerHTML = `
       <div id="about__modal" class="modal--parent">
         <div id="about__content" class="modal--content">
