@@ -163,6 +163,7 @@
             // Image
             if(href.match(/\.(jpeg|jpg|gif|png)$/i) !== null){
                 var img = $('<img>', { src: href });
+                console.log('img: ', img);
                 img.one('load', function() {
 					var wrap = $('<div class="nivo-lightbox-image" />');
                     wrap.append(img);
